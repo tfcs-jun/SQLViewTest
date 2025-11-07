@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_sale_sql_tree" model="ir.ui.view">
+    <field name="name">sale.sql.view.tree</field>
+    <field name="model">sale.sql.view</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="sale_number"/>
+        <field name="customer_name"/>
+        <field name="order_date"/>
+        <field name="amount"/>
+        <field name="currency_id"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="action_sale_sql_view" model="ir.actions.act_window">
+    <field name="name">Sale SQL View</field>
+    <field name="res_model">sale.sql.view</field>
+    <field name="view_mode">tree</field>
+    <field name="help" type="html">
+      <p class="o_view_nocontent_smiling_face">SQL view of sales orders</p>
+    </field>
+  </record>
+
+  <menuitem id="menu_sale_sql_root" name="Custom Reports" sequence="90"/>
+  <menuitem id="menu_sale_sql_view" name="Sale SQL View"
+            parent="menu_sale_sql_root" action="action_sale_sql_view"/>
+</odoo>
