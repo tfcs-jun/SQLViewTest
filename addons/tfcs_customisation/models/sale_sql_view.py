@@ -5,7 +5,7 @@ class SaleSqlView(models.Model):
     _description = 'Sale SQL View'
     _auto = False
 
-    id = fields.Integer(string='ID', readonly=True)   # must exist
+    id = fields.Id(readonly=True)
     sale_number = fields.Char('Sales Number', readonly=True)
     customer_name = fields.Char('Customer', readonly=True)
     order_date = fields.Datetime('Order Date', readonly=True)
