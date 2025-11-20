@@ -10,7 +10,6 @@
         'sale',
     ],
     'data': [
-        'security/ir.model.access.csv',
         'views/sale_sql_view.xml',
     ],
     'demo': [],
